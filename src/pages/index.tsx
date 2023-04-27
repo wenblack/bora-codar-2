@@ -1,6 +1,9 @@
 import Head from 'next/head'
-
-
+import sofa from '../assets/sofa.jpg'
+import Image from 'next/image'
+import image360 from '../assets/360.svg'
+import close from '../assets/close.svg'
+import sofaGif from '../assets/sofa.gif'
 
 export default function Home() {
   function toggle() {
@@ -18,17 +21,17 @@ export default function Home() {
       <div id="app">
         <div id="product-image">
           <button id="btn-360" onClick={toggle}>
-            <img
-              src="./assets/360.svg"
+            <Image
+              src={image360}
               alt="clique nesse botao para animar o sofa"
             />
           </button>
           <button id="btn-close" onClick={toggle}>
-            <img src="./assets/close.svg" alt="parar de animar o sofa" />
+            <Image src={close} alt="parar de animar o sofa" />
           </button>
 
-          <img id="static" src="./assets/sofa.jpg" alt="sofa" />
-          <img id="animated" src="./assets/sofa.gif" alt="sofa animado" />
+          <Image id="static" src={sofa} alt="sofa" />
+          <Image id="animated" src={sofaGif} alt="sofa animado" />
         </div>
 
         <div id="product-details">
